@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "nombre": "Paracetamol",
+    "imagen": "/images/paracetamol.jpg",
+    "precio": 5.99,
+    "rating": 4.5,
+    "category": "analgesicos"
+  },
+  {
+    "id": "2",
+    "nombre": "Ibuprofeno",
+    "imagen": "/images/ibuprofeno.jpg",
+    "precio": 7.5,
+    "rating": 4.0,
+    "category": "analgesicos"
+  }
+]
