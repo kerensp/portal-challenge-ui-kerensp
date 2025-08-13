@@ -1,18 +1,19 @@
 import "./globals.css"
 import Footer from '@/components/core/footer/footer'
 import { Header } from '@/components/core/header/header'
+import { ReactNode } from 'react'
 
 export const metadata = {
   title: "Challenge UI",
   description: "Portal UI Challenge",
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <body className="min-h-screen flex flex-col">
+      <body>
         <Header />
-        <main className="flex-1 container mx-auto p-4">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

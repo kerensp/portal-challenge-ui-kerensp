@@ -1,20 +1,16 @@
-/* 1️⃣ Importar Tailwind base, components y utilities */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-/* 2️⃣ Paleta de colores personalizada */
 @layer base {
   :root {
-    --color-primary: #264092; /* color principal */
-    --color-warning: #e79f00; /* naranja principal */
-    --color-input-bg: #e6e9ee; /* background de inputs */
-    --color-page-bg: #e9eef8; /* background de páginas */
-    --color-footer-bg: #264092; /* footer */
+    --color-primary: #264092;
+    --color-warning: #e79f00;
+    --color-input-bg: #e6e9ee;
+    --color-page-bg: #e9eef8;
+    --color-footer-bg: #264092;
   }
 
   body {
-    @apply bg-[var(--color-page-bg)] text-gray-900 font-sans;
+    @apply min-h-screen flex flex-col bg-[var(--color-page-bg)] text-gray-900 font-sans px-52;
   }
 
   input,
@@ -25,40 +21,5 @@
 
   button {
     @apply cursor-pointer rounded px-4 py-2 font-semibold;
-  }
-}
-
-/* 3️⃣ Componentes personalizados */
-@layer components {
-  /* Botón principal */
-  .btn-primary {
-    @apply bg-[var(--color-primary)] text-white hover:bg-[#1f3375] shadow-light;
-  }
-
-  /* Botón de advertencia */
-  .btn-warning {
-    @apply bg-[var(--color-warning)] text-white hover:bg-[#cc8800] shadow-light;
-  }
-
-  /* Footer */
-  .footer {
-    @apply bg-[var(--color-footer-bg)] text-white p-6;
-  }
-
-  /* Cards genéricas */
-  .card {
-    @apply bg-white shadow-light rounded p-4;
-  }
-
-  /* Header simple */
-  .header {
-    @apply bg-white shadow-light p-4 flex justify-between items-center;
-  }
-}
-
-/* 4️⃣ Utilities extra si quieres */
-@layer utilities {
-  .shadow-light {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 }
