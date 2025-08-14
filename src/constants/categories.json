@@ -1,5 +1,5 @@
 [
-  { "_id": "1", "name": "Electrónica" },
-  { "_id": "2", "name": "Ropa" },
-  { "_id": "3", "name": "Hogar" }
+  { "_id": "1", "name": "Electrónica", "slug": "electronica" },
+  { "_id": "2", "name": "Ropa", "slug": "ropa" },
+  { "_id": "3", "name": "Hogar", "slug": "hogar" }
 ]

@@ -1,5 +1,3 @@
-import { Category } from './category.interface';
-
 export interface Rating {
   rate: number;
   star1?: number;
@@ -10,11 +8,11 @@ export interface Rating {
   votes: number;
 }
 
-export interface Product {
-  id: string;
-  nombre: string;
-  imagen: string;
-  precio: number;
+export interface IProduct {
+  _id?: string;
+  name: string;
+  image: string;
+  price: number;
   rating: number;
   category: string;
 }
