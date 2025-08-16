@@ -1,5 +1,57 @@
-[
-  { "_id": "1", "name": "Electrónica", "slug": "electronica" },
-  { "_id": "2", "name": "Ropa", "slug": "ropa" },
-  { "_id": "3", "name": "Hogar", "slug": "hogar" }
+[{
+    "_id": "category-1",
+    "name": "Vitaminas",
+    "description": "Vitaminas",
+    "slug": "vitaminas",
+    "icon": "VitaminsIcon"
+  },
+  {
+    "_id": "category-2",
+    "name": "Analgésicos y antiinflamatorios",
+    "description": "Analgésicos y antiinflamatorios",
+    "slug": "analgesicos-antiflamatorios",
+    "icon": "AnalgesicsIcon"
+  },
+  {
+    "_id": "category-3",
+    "name": "Antiinfecciosos",
+    "description": "Antiinfecciosos",
+    "slug": "antiinfecciosos",
+    "icon": "AntiInfectiousIcon"
+  },
+  {
+    "_id": "category-4",
+    "name": "Mucolítico y antitusivos",
+    "description": "Mucolítico y antitusivos",
+    "slug": "mucolitico-antitusivo",
+    "icon": "AntitussivesIcon"
+  },
+  {
+    "_id": "category-5",
+    "name": "Antiulcerosos y antiácidos",
+    "description": "Antiulcerosos y antiácidos",
+    "slug": "antiulceroso-antiacido",
+    "icon": "AntacidsIcon"
+  },
+  {
+    "_id": "category-6",
+    "name": "Antidiarreicos y laxantes",
+    "description": "Antidiarreicos y laxantes",
+    "slug": "antidiarreico-laxantes",
+    "icon": "AntidiarrhealsIcon"
+  },
+  {
+    "_id": "category-7",
+    "name": "Antipiréticos",
+    "description": "Antipiréticos",
+    "slug": "antipireticos",
+    "icon": "AntipyreticsIcon"
+  },
+  {
+    "_id": "category-8",
+    "name": "Antialérgicos",
+    "description": "Antialérgicos",
+    "slug": "antialergicos",
+    "icon": "AntiallergicsIcon"
+  }
 ]

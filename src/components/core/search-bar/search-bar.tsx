@@ -21,7 +21,7 @@ export default function SearchBar({ categories, initialParams, mobile }: Props) 
         <Select value={category} onValueChange={setCategory}>
           <SelectTrigger
             aria-label="Seleccionar categoría"
-            className="rounded-l-md w-[140px] !bg-[var(--color-primary)] text-white"
+            className="btn rounded-l-md w-[140px] !bg-[var(--color-primary)] text-white"
           >
             <LayoutGridIcon className='w-5 h-5' />
             <SelectValue placeholder={'Categoría'} />

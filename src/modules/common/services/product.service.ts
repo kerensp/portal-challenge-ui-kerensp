@@ -1,8 +1,5 @@
 import { IProduct } from '@/definitions/product.interface';
-import { ICategory } from '@/definitions/category.interface';
-import { ApiResponse } from '@/definitions/common/api.interface';
 import productsData from '@/constants/products.json';
-import categoriesData from '@/constants/categories.json';
 
 export type FetchProductsParams = {
   category?: string;
@@ -31,11 +28,5 @@ export async function getProductsByCategory(
 
       resolve(filtered);
     }, FILTER_DELAY);
-  });
-}
-
-export async function getCategories(): Promise<ApiResponse<ICategory[]>> {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve({ data: categoriesData }), 200);
   });
 }

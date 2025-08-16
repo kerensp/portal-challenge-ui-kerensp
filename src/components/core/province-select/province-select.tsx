@@ -13,7 +13,7 @@ export default function ProvinceSelect() {
     <Select onValueChange={(val) => setSelectedProvince(val)} value={selectedProvince}>
       <SelectTrigger
         aria-label="Seleccionar provincia"
-        className="max-w-[180px] flex items-center gap-2 bg-[var(--color-input-bg)] px-3 py-2 rounded-md"
+        className="btn max-w-[180px] flex items-center gap-2 bg-[var(--color-input-bg)] px-3 py-2 rounded-md"
       >
         <MapPin className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0" />
         <SelectValue placeholder="Todas las provincias" />

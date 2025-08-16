@@ -19,7 +19,7 @@
     @apply min-h-10 !bg-[var(--color-input-bg)] border-none rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)];
   }
 
-  button {
+  button.btn {
     @apply cursor-pointer rounded px-4 py-2 font-semibold !h-10;
   }
 

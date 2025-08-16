@@ -1,9 +1,9 @@
-export type ErrorApiResponse = {
+type ErrorApiResponse = {
   error: any;
-  data?: null;
+  data: null;
 };
 
-export type OkApiResponse<T> = {
+type OkApiResponse<T> = {
   error?: undefined;
   data: T;
 };

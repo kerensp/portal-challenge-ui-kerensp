@@ -4,20 +4,20 @@ import styles from './styles.module.css';
 import { cn } from '@/lib/utils';
 import { MENU } from '@/constants/menu';
 
-const NavbarMenu = async ({ className }: { className?: string }) => {
+const NavbarMenu = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        'hidden md:px-4 xl:px-52 md:py-3.5 md:flex justify-start gap-5 xl:gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none bg-[var(--color-primary)]',
+        "md:px-4 xl:px-52 md:py-3.5 flex justify-start gap-5 xl:gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none bg-[var(--color-primary)]",
         styles.scrollbarNone,
         className
       )}
     >
-      {MENU?.map((item, idx) => (
+      {MENU.map((item, idx) => (
         <Link
           key={`${item.path}-${idx}`}
           href={item.path}
-          className="text-[16px] text font-light text-white hover:font-medium"
+          className="text-[16px] font-light text-white hover:font-medium"
           target={item.target}
         >
           {item.title}
