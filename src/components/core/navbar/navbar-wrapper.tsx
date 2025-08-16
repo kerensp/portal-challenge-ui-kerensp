@@ -11,7 +11,7 @@ function NavbarWrapper({ children }: Props) {
   const { isVisible, lastScrollY } = useScrollBar();
 
   return (
-    <div className="min-h-[100px] w-full md:min-h-[156px]">
+    <div className="w-full">
       <div
         className={cn(
           'left-0 top-0 z-10 w-full bg-navBar transition-transform duration-300 ease-in-out will-change-transform',

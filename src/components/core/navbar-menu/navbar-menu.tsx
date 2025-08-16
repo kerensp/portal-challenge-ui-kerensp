@@ -8,7 +8,7 @@ const NavbarMenu = async () => {
   return (
     <div
       className={cn(
-        'flex w-full justify-start gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none',
+        'flex w-full justify-start gap-5 xl:gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none',
         styles.scrollbarNone
       )}
     >

@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import { useCallback, useMemo, useState } from 'react';
 import { ICategory } from '@/definitions/category.interface';
 
-interface UseSearchBarProps {
+type UseSearchBarProps = {
   categories?: ICategory[];
   initialParams?: { category?: string; search?: string };
 }

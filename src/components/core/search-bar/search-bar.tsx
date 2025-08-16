@@ -5,7 +5,7 @@ import { LayoutGridIcon, Search, X } from 'lucide-react';
 import { ICategory } from '@/definitions/category.interface';
 import { useSearchBar } from '@/hooks/useSearchBar';
 
-interface Props {
+type Props = {
   mobile?: boolean;
   categories?: ICategory[];
   initialParams?: { category?: string; search?: string };

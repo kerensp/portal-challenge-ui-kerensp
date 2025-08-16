@@ -9,6 +9,8 @@ import { Skeleton } from '@/components/ui/skeleton';
 import SkeletonSearchBar from '../search-bar/skeleton-search-bar';
 import { Suspense } from 'react';
 import MobileMenu from '@/components/mobile-menu/mobile-menu';
+import NavbarMenuWrapper from '../navbar-menu/navbar-menu-wrapper';
+import NavbarMenu from '../navbar-menu/navbar-menu';
 
 type Props = {
   categories: ICategory[];
@@ -24,7 +26,7 @@ export default async function Navbar({ categories }: Props) {
             <div className='flex items-center gap-2'>
               <MobileMenu />
               <Link href="/">
-                <h1 className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">Mi Nombre</h1>
+                <h2 className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">Mi Nombre</h2>
               </Link>
             </div>
 
@@ -50,6 +52,9 @@ export default async function Navbar({ categories }: Props) {
           </div>
         </nav>
       </Container>
+      <NavbarMenuWrapper>
+        <NavbarMenu />
+      </NavbarMenuWrapper>
     </>
   );
 }
