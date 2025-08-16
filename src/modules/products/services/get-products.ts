@@ -1,11 +1,10 @@
 import { IProduct } from '@/definitions/product.interface';
 import { ICategory } from '@/definitions/category.interface';
 import { ApiResponse } from '@/definitions/common/api.interface';
-import { RequestConfig } from '@/services/api-service.service';
 import productsData from '@/constants/products.json';
 import categoriesData from '@/constants/categories.json';
 
-export interface FetchProductsParams {
+export type FetchProductsParams = {
   category?: string;
   search?: string;
 }

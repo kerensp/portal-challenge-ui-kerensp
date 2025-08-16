@@ -1,1 +1,105 @@
-
+[
+  {
+    "id": "banner-principal",
+    "title": "Envía Salud y Bienestar a tus seres queridos",
+    "desktop": {
+      "url": "/images/banners/main-desktop.webp",
+      "width": 959,
+      "height": 474
+    },
+    "mobile": {
+      "url": "/images/banners/main-mobile.webp",
+      "width": 390,
+      "height": 240
+    },
+    "href": "/ofertas",
+    "position": "main",
+    "variant": "hero"
+  },
+  {
+    "id": "banner-secundario-1",
+    "title": "Cuida a los pequeños de casa con amor",
+    "desktop": {
+      "url": "/images/banners/top-desktop.webp",
+      "width": 468,
+      "height": 227
+    },
+    "mobile": {
+      "url": "/images/banners/top-mobile.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/ofertas",
+    "position": "side-top",
+    "variant": "hero"
+  },
+  {
+    "id": "banner-secundario-2",
+    "title": "¡Salud al Mejor Precio!",
+    "alt": "Frascos de medicamentos",
+    "desktop": {
+      "url": "/images/banners/bottom-desktop.webp",
+      "width": 468,
+      "height": 227
+    },
+    "mobile": {
+      "url": "/images/banners/bottom-desktop.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/ofertas",
+    "position": "side-bottom",
+    "variant": "hero"
+  },
+  {
+    "id": "banner-grid-1",
+    "title": "Complejo B+Ginseng",
+    "desktop": {
+      "url": "/images/banners/grid-1.webp",
+      "width": 380,
+      "height": 200
+    },
+    "mobile": {
+      "url": "/images/banners/grid-1-mobile.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/productos/complejo-b-ginseng",
+    "position": "grid-1",
+    "variant": "grid"
+  },
+  {
+    "id": "banner-grid-2",
+    "title": "Maxivis Suplemento Alimenticio",
+    "desktop": {
+      "url": "/images/banners/grid-2.webp",
+      "width": 380,
+      "height": 200
+    },
+    "mobile": {
+      "url": "/images/banners/grid-2-mobile.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/productos/maxivis",
+    "position": "grid-2",
+    "variant": "grid"
+  },
+  {
+    "id": "banner-grid-3",
+    "title": "Mentol Chino",
+    "desktop": {
+      "url": "/images/banners/grid-3.webp",
+      "width": 380,
+      "height": 200
+    },
+    "mobile": {
+      "url": "/images/banners/grid-3-mobile.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/productos/mentol-chino",
+    "position": "grid-3",
+    "variant": "grid"
+  }
+]
