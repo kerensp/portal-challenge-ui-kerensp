@@ -64,6 +64,7 @@ export function CarouselDots() {
         return (
           <button
             key={index}
+            aria-label={`Ir al slide ${index + 1}`}
             onClick={() => scrollTo(index)}
             className={cn(
               "h-2 rounded-full transition-all duration-300",
