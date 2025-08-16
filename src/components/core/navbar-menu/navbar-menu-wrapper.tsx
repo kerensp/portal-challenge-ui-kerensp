@@ -13,11 +13,11 @@ const NavbarMenuWrapper = ({ children }: Props) => {
   return (
     <div
       className={cn(
-        'hidden w-full bg-[var(--color-primary)] px-48',
+        'hidden w-full bg-[var(--color-primary)] px-4 xl:px-52',
         isVisible && lastScrollY > 100 ? 'hidden' : 'hidden md:block'
       )}
     >
-      <div className="mx-auto max-w-[1445px] py-3.5">{children}</div>
+      <div className="mx-auto py-3.5">{children}</div>
     </div>
   );
 };

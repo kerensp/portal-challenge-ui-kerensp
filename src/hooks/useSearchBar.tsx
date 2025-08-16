@@ -1,54 +1,55 @@
 'use client';
-import { useState, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
+import { useCallback, useMemo, useState } from 'react';
 import { ICategory } from '@/definitions/category.interface';
-import { IProduct } from '@/definitions/product.interface';
-import { fetchProductsByCategory } from '@/modules/products/services/fetch-products';
 
-interface UseSearchProps {
-  categories: ICategory[];
+interface UseSearchBarProps {
+  categories?: ICategory[];
   initialParams?: { category?: string; search?: string };
 }
 
-export function useSearchBar({ categories, initialParams }: UseSearchProps) {
+export function useSearchBar({ categories, initialParams }: UseSearchBarProps) {
   const [category, setCategory] = useState(initialParams?.category || '');
   const [search, setSearch] = useState(initialParams?.search || '');
-  const [results, setResults] = useState<IProduct[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
-  const selectedCategory = useMemo(() =>
-    categories.find((c) => c.name === category), [category, categories]);
+  const selectedCategory = useMemo(
+    () => categories?.find((c) => c?.slug === category),
+    [category, categories]
+  );
 
-  const onSearch = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await fetchProductsByCategory({ category, search });
-      setResults(data);
-    } catch (err) {
-      setError('Error al buscar productos');
-      console.error(err);
-    } finally {
-      setLoading(false);
+  const onSearch = useCallback(() => {
+    const hasSearch = Boolean(search?.trim());
+    const hasCategory = Boolean(category) && category !== 'all';
+
+    if (hasSearch && hasCategory) {
+      router.push(`/${category}/${encodeURIComponent(search)}`);
+      return;
     }
-  };
+    if (hasSearch) {
+      router.push(`/catalog/${encodeURIComponent(search)}`);
+      return;
+    }
+    if (hasCategory) {
+      router.push(`/${category}`);
+      return;
+    }
+    router.push('/catalog');
+  }, [search, category, router]);
 
-  const onClear = () => {
+  const clearSearch = useCallback(() => {
     setCategory('');
     setSearch('');
-    setResults([]);
-  };
+    router.push('/');
+  }, [router]);
 
   return {
     category,
     setCategory,
     search,
     setSearch,
+    clearSearch,
     selectedCategory,
     onSearch,
-    onClear,
-    results,
-    loading,
-    error,
   };
 }

@@ -1,12 +1,11 @@
-import NavbarMenuWrapper from '@/components/core/navbar-menu/navbar-menu-wrapper'
-import "./globals.css"
-import Footer from '@/components/core/footer/footer'
-import Navbar from '@/components/core/navbar/navbar'
-import NavbarWrapper from '@/components/core/navbar/navbar-wrapper'
-import { fetchCategories } from '@/modules/products/services/fetch-products'
-import { ReactNode } from 'react'
+import NavbarMenuWrapper from '@/components/core/navbar-menu/navbar-menu-wrapper';
+import "./globals.css";
+import Navbar from '@/components/core/navbar/navbar';
+import NavbarWrapper from '@/components/core/navbar/navbar-wrapper';
+import { ReactNode } from 'react';
 import { Inter } from "next/font/google";
-import NavbarMenu from '@/components/core/navbar-menu/navbar-menu'
+import NavbarMenu from '@/components/core/navbar-menu/navbar-menu';
+import { getCategories } from '@/modules/products/services/get-products';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +19,7 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
-  const { data } = await fetchCategories({});
+  const { data } = await getCategories();
 
   return (
     <html lang="es" className={inter.variable}>
@@ -31,9 +30,11 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             <NavbarMenu />
           </NavbarMenuWrapper>
         </NavbarWrapper>
-        <main>{children}</main>
-        <Footer />
+        <main>
+          {children}
+        </main>
       </body>
+      {/* <Footer /> */}
     </html>
   )
 }

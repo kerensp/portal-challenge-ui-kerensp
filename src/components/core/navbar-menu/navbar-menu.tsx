@@ -8,13 +8,13 @@ const NavbarMenu = async () => {
   return (
     <div
       className={cn(
-        'flex w-full items-center justify-start gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none',
+        'flex w-full justify-start gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none',
         styles.scrollbarNone
       )}
     >
       {MENU?.map((item, idx) => (
         <Link
-          key={item.path + idx}
+          key={`${item.path}-${idx}`}
           href={item.path}
           className="text-[16px] text font-light text-white hover:font-medium"
           target={item.target}
