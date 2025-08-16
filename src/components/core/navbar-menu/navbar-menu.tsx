@@ -4,12 +4,13 @@ import styles from './styles.module.css';
 import { cn } from '@/lib/utils';
 import { MENU } from '@/constants/menu';
 
-const NavbarMenu = async () => {
+const NavbarMenu = async ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        'flex w-full justify-start gap-5 xl:gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none',
-        styles.scrollbarNone
+        'hidden md:px-4 xl:px-52 md:py-3.5 md:flex justify-start gap-5 xl:gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none bg-[var(--color-primary)]',
+        styles.scrollbarNone,
+        className
       )}
     >
       {MENU?.map((item, idx) => (

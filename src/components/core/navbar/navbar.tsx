@@ -9,7 +9,6 @@ import { Skeleton } from '@/components/ui/skeleton';
 import SkeletonSearchBar from '../search-bar/skeleton-search-bar';
 import { Suspense } from 'react';
 import MobileMenu from '@/components/mobile-menu/mobile-menu';
-import NavbarMenuWrapper from '../navbar-menu/navbar-menu-wrapper';
 import NavbarMenu from '../navbar-menu/navbar-menu';
 
 type Props = {
@@ -52,9 +51,8 @@ export default async function Navbar({ categories }: Props) {
           </div>
         </nav>
       </Container>
-      <NavbarMenuWrapper>
-        <NavbarMenu />
-      </NavbarMenuWrapper>
+
+      <NavbarMenu className='hidden md:flex' />
     </>
   );
 }
