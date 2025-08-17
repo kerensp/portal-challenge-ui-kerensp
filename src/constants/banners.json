@@ -64,7 +64,7 @@
       "width": 390,
       "height": 190
     },
-    "href": "/productos/complejo-b-ginseng",
+    "href": "/catalog/complejo-b-ginseng",
     "position": "grid-1",
     "variant": "grid"
   },
@@ -81,7 +81,7 @@
       "width": 390,
       "height": 190
     },
-    "href": "/productos/maxivis",
+    "href": "/catalohg/maxivis",
     "position": "grid-2",
     "variant": "grid"
   },
@@ -98,8 +98,25 @@
       "width": 390,
       "height": 190
     },
-    "href": "/productos/mentol-chino",
+    "href": "/catalohg/mentol-chino",
     "position": "grid-3",
     "variant": "grid"
+  },
+  {
+    "id": "promo-1",
+    "title": "Tu Farmacia Online de Confianza.",
+    "desktop": {
+      "url": "/images/promos/promo-1.png",
+      "width": 85,
+      "height": 1445
+    },
+    "mobile": {
+      "url": "/images/promos/promo-1-mobile.webp",
+      "width": 388,
+      "height": 188
+    },
+    "href": "/catalog",
+    "position": "main",
+    "variant": "promo"
   }
 ]

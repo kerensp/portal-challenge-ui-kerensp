@@ -9,5 +9,5 @@ export type Banner = {
   href?: string;
   position: 'main' | 'side-top' | 'side-bottom';
   align?: 'left' | 'center' | 'right';
-  variant?: 'hero' | 'grid';
+  variant?: 'hero' | 'grid' | 'promo';
 };

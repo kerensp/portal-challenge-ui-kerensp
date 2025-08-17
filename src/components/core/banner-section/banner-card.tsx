@@ -1,18 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Banner } from '@/definitions/banner';
+import { cn } from '@/lib/utils';
 
 type BannerCardProps = {
   banner: Banner;
   priority?: boolean;
   className?: string;
-}
+  withTransition?: boolean; // 👈
+};
 
-const BannerCard = ({ banner, priority = false, className }: BannerCardProps) => {
+const BannerCard = ({
+  banner,
+  priority = false,
+  className,
+  withTransition = true,
+}: BannerCardProps) => {
   return (
     <Link
       href={banner?.href || "/"}
-      className={`group relative block overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ${className}`}
+      className={cn(
+        "group relative block overflow-hidden rounded-lg shadow-md",
+        withTransition && "hover:shadow-lg transition-all duration-300",
+        className
+      )}
       aria-label={`Ver ${banner?.title}`}
     >
       <div className="relative w-full h-full">
@@ -24,7 +35,10 @@ const BannerCard = ({ banner, priority = false, className }: BannerCardProps) =>
           height={banner?.desktop?.height}
           priority={priority}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 959px"
-          className="hidden md:block w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className={cn(
+            "hidden md:block w-full h-full object-cover",
+            withTransition && "group-hover:scale-105 transition-transform duration-300"
+          )}
         />
 
         {/* Mobile Image */}
@@ -35,7 +49,10 @@ const BannerCard = ({ banner, priority = false, className }: BannerCardProps) =>
           height={banner?.mobile?.height}
           priority={priority}
           sizes="100vw"
-          className="md:hidden w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className={cn(
+            "md:hidden w-full h-full object-cover",
+            withTransition && "group-hover:scale-105 transition-transform duration-300"
+          )}
         />
       </div>
     </Link>
