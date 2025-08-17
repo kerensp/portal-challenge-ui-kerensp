@@ -15,6 +15,7 @@ export interface IProduct {
   name: string;
   media?: MediaItem;
   slug: string;
+  description?: string;
   isNew?: boolean;
   discount?: number;
   price: number;

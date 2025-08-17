@@ -6,17 +6,40 @@ import React, { useState } from "react";
 
 type FavoriteButtonProps = {
   className?: string;
+  initialFavorite?: boolean;
+  variant?: "icon" | "button";
 };
 
-const FavoriteButton = ({ className }: FavoriteButtonProps) => {
-  const [isFavorite, setIsFavorite] = useState(false);
+const FavoriteButton = ({
+  className,
+  initialFavorite = false,
+  variant = "icon",
+}: FavoriteButtonProps) => {
+  const [isFavorite, setIsFavorite] = useState(initialFavorite);
 
   const toggleFavorite = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
-    const newValue = !isFavorite;
-    setIsFavorite(newValue);
+    setIsFavorite((prev) => !prev);
   };
+
+  if (variant === "button") {
+    return (
+      <Button
+        onClick={toggleFavorite}
+        variant={isFavorite ? "destructive" : "default"}
+        className={cn("flex items-center gap-2", className)}
+      >
+        <HeartIcon
+          className={cn(
+            "h-5 w-5 transition-colors",
+            isFavorite ? "fill-current text-white" : "text-gray-500"
+          )}
+        />
+        {isFavorite ? "Quitar de favoritos" : "Añadir a favoritos"}
+      </Button>
+    );
+  }
 
   return (
     <Button

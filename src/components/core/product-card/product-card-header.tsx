@@ -11,9 +11,9 @@ type Props = {
   imgClassName?: string;
 };
 
-const ProductCardHeader = ({ product, imgClassName }: Props) => {
+const ProductCardHeader = ({ product, imgClassName, className }: Props) => {
   return (
-    <CardHeader className="relative h-[180px] md:h-[240px] p-0 overflow-hidden group">
+    <CardHeader className={cn("relative h-[180px] md:h-[240px] p-0 overflow-hidden group", className)}>
       <div className="absolute inset-0">
         <Image
           src={product?.media?.url || "/images/placeholder.webp"}

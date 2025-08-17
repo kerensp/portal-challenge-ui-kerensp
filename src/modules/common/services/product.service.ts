@@ -1,12 +1,30 @@
 import { IProduct } from '@/definitions/product.interface';
 import productsData from '@/constants/products.json';
+import { mockFetch } from '@/lib/utils';
 
 export type FetchProductsParams = {
   category?: string;
+  slug?: string;
   search?: string;
 }
 
 const FILTER_DELAY = 400;
+
+export async function getProducts(): Promise<IProduct[]> {
+  const res = await mockFetch(productsData);
+  if (!res.ok) throw new Error("Failed to fetch banners");
+  return res.json();
+}
+export async function getProductBySlug(slug: string): Promise<IProduct | null> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const product = productsData.find(
+        (p) => p.slug === slug
+      );
+      resolve(product ?? null);
+    }, FILTER_DELAY);
+  });
+}
 
 export async function getProductsByCategory(
   params?: FetchProductsParams
