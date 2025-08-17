@@ -1,7 +1,7 @@
 export interface MediaItem {
   height: number;
-  sizes: string[];
-  thumb: string;
+  sizes?: string[];
+  thumb?: string;
   url: string;
   width: number;
 }

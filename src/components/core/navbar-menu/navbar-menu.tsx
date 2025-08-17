@@ -8,7 +8,7 @@ const NavbarMenu = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "md:px-4 xl:px-52 md:py-3.5 flex justify-start gap-5 xl:gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none bg-[var(--color-primary)]",
+        "md:px-4 xl:px-20 md:py-3.5 flex justify-start gap-5 xl:gap-7 overflow-y-hidden overflow-x-scroll scrollbar-none bg-[var(--color-primary)]",
         styles.scrollbarNone,
         className
       )}

@@ -8,19 +8,22 @@ type Props = {
   size?: PriceSize;
 };
 
-export default function ProductPrice({
+export default function ProductCardPrice({
   price,
   className,
   size = "md",
 }: Props) {
   const [dollars, cents] = price.toFixed(2).split(".");
 
-  const sizeClasses: Record<PriceSize, { price: string; cents: string }> = {
-    xs: { price: "text-base", cents: "text-[10px]" },
-    sm: { price: "text-lg", cents: "text-xs" },
-    md: { price: "text-2xl", cents: "text-sm" },
-    lg: { price: "text-3xl", cents: "text-lg" },
-    xl: { price: "text-4xl", cents: "text-xl" },
+  const sizeClasses: Record<
+    PriceSize,
+    { price: string; cents: string; centsOffset: string }
+  > = {
+    xs: { price: "text-base", cents: "text-xs", centsOffset: "-top-0.5" },
+    sm: { price: "text-lg", cents: "text-sm", centsOffset: "-top-0.5" },
+    md: { price: "text-2xl", cents: "text-base", centsOffset: "-top-1" },
+    lg: { price: "text-3xl", cents: "text-lg", centsOffset: "-top-1" },
+    xl: { price: "text-4xl", cents: "text-xl", centsOffset: "-top-1.5" },
   };
 
   return (
@@ -35,8 +38,8 @@ export default function ProductPrice({
       ${dollars}
       <span
         className={cn(
-          "ml-0.5 font-light leading-none relative -top-0.5",
-          sizeClasses[size].cents
+          "ml-1 font-light relative",
+          sizeClasses[size].cents,
         )}
       >
         {cents}

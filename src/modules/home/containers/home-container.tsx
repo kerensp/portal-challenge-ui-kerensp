@@ -5,6 +5,9 @@ import { getBannersByVariant } from '@/modules/common/services/banner.service';
 import { Suspense } from 'react';
 import CategorySection from '../components/category-section/category-section';
 import { getCategories } from '@/modules/category/services/category.service';
+import { getProductsByCategory } from '@/modules/common/services/product.service';
+import RecommendedProducts from './recommended-products';
+import CategorySectionSkeleton from '../components/category-section/category-skeleton';
 
 const HomeContainer = async () => {
   const [heroBanners, stripBanners] = await Promise.all([
@@ -13,13 +16,18 @@ const HomeContainer = async () => {
   ]);
 
   const categories = await getCategories();
+  const products = await getProductsByCategory();
 
   return (
     <>
       <BannerSection banners={heroBanners} />
-      <Suspense>
+
+      <Suspense fallback={<CategorySectionSkeleton />}>
         <CategorySection categories={categories?.data || []} />
       </Suspense>
+
+      <RecommendedProducts products={products || []} />
+
       <Suspense fallback={<BannerGridSkeleton />}>
         <BannerGrid banners={stripBanners} />
       </Suspense>

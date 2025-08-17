@@ -1,3 +1,5 @@
+import { MediaItem } from './common/media.interface';
+
 export interface Rating {
   rate: number;
   star1?: number;
@@ -11,7 +13,10 @@ export interface Rating {
 export interface IProduct {
   _id?: string;
   name: string;
-  image: string;
+  media?: MediaItem;
+  slug: string;
+  isNew?: boolean;
+  discount?: number;
   price: number;
   rating: number;
   category: string;
