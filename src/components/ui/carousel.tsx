@@ -51,14 +51,14 @@ export function CarouselItem({ className, ...props }: React.HTMLAttributes<HTMLD
   );
 }
 
-export function CarouselDots() {
+export function CarouselDots({ className }: { className?: string }) {
   const { embla, selectedIndex, scrollTo } = React.useContext(CarouselContext);
 
   if (!embla) return null;
   const dots = embla.scrollSnapList();
 
   return (
-    <div className="flex justify-center gap-2 mt-4">
+    <div className={cn("flex justify-center gap-2 mt-4", className)}>
       {dots.map((_, index) => {
         const isActive = selectedIndex === index;
         return (

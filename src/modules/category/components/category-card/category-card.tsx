@@ -16,12 +16,12 @@ export const CategoryCard = ({ category, className }: Props) => {
     <Link href={`/category/${category?.slug}`} aria-label={category?.name}>
       <div
         className={cn(
-          "relative flex flex-col gap-2 items-center min-h-[156px] min-w-[139px] rounded-xl overflow-hidden cursor-pointer group transition-colors duration-300 px-6 py-5",
+          "relative flex flex-col gap-2 items-center min-h-[156px] w-[139px] rounded-xl overflow-hidden cursor-pointer group transition-colors duration-300 px-6 pt-6 pb-3",
           "bg-[#DADFF2] hover:bg-white",
           className
         )}
       >
-        <div className="absolute top-0 right-0 w-[100px] h-[100px] translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--color-warning)] border-[6px] border-[#F2C57D] hidden group-hover:flex z-[1]" />
+        <div className="absolute top-0 right-0 w-[90px] h-[90px] translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--color-warning)] border-[6px] border-[#F2C57D] hidden group-hover:flex z-[1]" />
 
         <Icon
           className={cn(
@@ -32,7 +32,7 @@ export const CategoryCard = ({ category, className }: Props) => {
 
         <div
           className={cn(
-            "text-sm font-medium text-center transition-colors duration-300 z-[2]",
+            "text-xs mt-2 font-normal text-center transition-colors duration-300 z-[2]",
             "group-hover:text-warning"
           )}
         >

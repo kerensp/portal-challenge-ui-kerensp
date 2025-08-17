@@ -16,19 +16,24 @@ type Props = {
 
 export default function CategorySection({ categories }: Props) {
   return (
-    <Container>
-      <Carousel opts={{ align: "start" }} className="w-full">
-        <CarouselContent className="gap-x-4">
-          {categories?.map((cat) => (
+    <Container title='Obtén todo, justo aquí'>
+      <Carousel
+        className='w-full'
+        opts={{
+          align: 'center'
+        }}
+      >
+        <CarouselContent className="items-stretch justify-stretch gap-1">
+          {categories?.map((category, idx) => (
             <CarouselItem
-              key={cat._id}
-              className="basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/6 xl:basis-1/8"
+              key={idx}
+              className="basis-[135px]/2 xs:basis-1/5 md:basis-1/6 lg:basis-1/7 2xl:!basis-1/9"
             >
-              <CategoryCard category={cat} />
+              <CategoryCard key={category?._id || idx} category={category} />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselDots />
+        <CarouselDots className='md:hidden' />
       </Carousel>
     </Container>
   );
