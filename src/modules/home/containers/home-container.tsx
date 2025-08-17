@@ -13,6 +13,7 @@ import BestSellersProducts from './best-sellers-products';
 import ServicesSection from './services-section';
 import RecentProducts from './recent-products';
 import PromotionalBanner from '../components/promotional-banner/promotional-banner';
+import FindAllSection from './find-all-section';
 
 const HomeContainer = async () => {
   const [heroBanners, stripBanners, promoBanner, recentBanner, promotionalBanner] = await Promise.all([
@@ -54,6 +55,8 @@ const HomeContainer = async () => {
       <RecentProducts products={products} banner={recentBanner[0]} />
 
       <PromotionalBanner banner={promotionalBanner[0]} />
+
+      <FindAllSection />
     </>
   );
 };
