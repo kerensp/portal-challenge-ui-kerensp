@@ -11,7 +11,7 @@ const BannerContent = ({ banners }: { banners: Banner[] }) => {
   if (!mainBanner) return null;
 
   return (
-    <section className="w-full" aria-label="Ofertas y promociones">
+    <section className="w-full mt-2" aria-label="Ofertas y promociones">
       <div className="flex flex-col lg:flex-row gap-2.5 lg:gap-6">
         <div className="flex-1 lg:flex-[2]">
           <BannerCard banner={mainBanner} priority />

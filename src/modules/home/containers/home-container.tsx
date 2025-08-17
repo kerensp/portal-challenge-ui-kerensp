@@ -11,12 +11,15 @@ import CategorySectionSkeleton from '../components/category-section/category-ske
 import BannerCard from '@/components/core/banner-section/banner-card';
 import BestSellersProducts from './best-sellers-products';
 import ServicesSection from './services-section';
+import RecentProducts from './recent-products';
+import BannerWithProducts from '../components/banner-with-products/banner-with-products';
 
 const HomeContainer = async () => {
-  const [heroBanners, stripBanners, promoBanner] = await Promise.all([
+  const [heroBanners, stripBanners, promoBanner, recentBanner] = await Promise.all([
     getBannersByVariant("hero"),
     getBannersByVariant("grid"),
     getBannersByVariant("promo"),
+    getBannersByVariant("recent-products"),
   ]);
 
   const categories = await getCategories();
@@ -46,6 +49,8 @@ const HomeContainer = async () => {
       <BestSellersProducts products={products?.slice(5, 15)} />
 
       <ServicesSection />
+
+      <RecentProducts products={products} banner={recentBanner[0]} />
     </>
   );
 };

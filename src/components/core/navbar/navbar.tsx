@@ -23,7 +23,7 @@ const Navbar = ({ categories }: Props) => {
             <MobileMenu />
             <Link href="/">
               <h2 className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
-                Mi Nombre
+                Botifarma
               </h2>
             </Link>
           </div>

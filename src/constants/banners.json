@@ -118,5 +118,22 @@
     "href": "/catalog",
     "position": "main",
     "variant": "promo"
+  },
+  {
+    "id": "recent-product-banner",
+    "title": "Tu Farmacia Online de Confianza.",
+    "desktop": {
+      "url": "/images/recent-banner/recent-banner.webp",
+      "width": 570,
+      "height": 405
+    },
+    "mobile": {
+      "url": "/images/promos/recent-banner-mobile.webp",
+      "width": 390,
+      "height": 277
+    },
+    "href": "/catalog",
+    "position": "main",
+    "variant": "recent-products"
   }
 ]
