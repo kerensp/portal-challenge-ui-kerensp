@@ -12,14 +12,15 @@ import BannerCard from '@/components/core/banner-section/banner-card';
 import BestSellersProducts from './best-sellers-products';
 import ServicesSection from './services-section';
 import RecentProducts from './recent-products';
-import BannerWithProducts from '../components/banner-with-products/banner-with-products';
+import PromotionalBanner from '../components/promotional-banner/promotional-banner';
 
 const HomeContainer = async () => {
-  const [heroBanners, stripBanners, promoBanner, recentBanner] = await Promise.all([
+  const [heroBanners, stripBanners, promoBanner, recentBanner, promotionalBanner] = await Promise.all([
     getBannersByVariant("hero"),
     getBannersByVariant("grid"),
     getBannersByVariant("promo"),
     getBannersByVariant("recent-products"),
+    getBannersByVariant("with-products"),
   ]);
 
   const categories = await getCategories();
@@ -51,6 +52,8 @@ const HomeContainer = async () => {
       <ServicesSection />
 
       <RecentProducts products={products} banner={recentBanner[0]} />
+
+      <PromotionalBanner banner={promotionalBanner[0]} />
     </>
   );
 };
