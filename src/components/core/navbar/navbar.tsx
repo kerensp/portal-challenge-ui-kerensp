@@ -22,7 +22,7 @@ const Navbar = ({ categories }: Props) => {
           <div className="flex items-center gap-2">
             <MobileMenu />
             <Link href="/">
-              <h2 className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
+              <h2 className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors font-inter">
                 Botifarma
               </h2>
             </Link>

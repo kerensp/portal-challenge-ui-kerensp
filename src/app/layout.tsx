@@ -2,10 +2,11 @@ import "./globals.css";
 import Navbar from '@/components/core/navbar/navbar';
 import NavbarWrapper from '@/components/core/navbar/navbar-wrapper';
 import { ReactNode } from 'react';
-import { Montserrat } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { Metadata } from 'next';
 import NavbarMenu from '@/components/core/navbar-menu/navbar-menu';
 import { getCategories } from '@/modules/category/services/category.service';
+import Footer from '@/components/core/footer/footer';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -14,6 +15,13 @@ const montserrat = Montserrat({
   variable: "--font-sans",
   weight: ["300", "400", "500", "600", "700"],
   fallback: ["sans-serif"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const PUBLIC_APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
@@ -66,7 +74,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   const { data } = await getCategories();
 
   return (
-    <html lang="es" className={montserrat.variable}>
+    <html lang="es" className={`${montserrat.variable} ${inter.variable}`}>
       <body>
         <NavbarWrapper>
           <Navbar categories={data || []} />
@@ -75,8 +83,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <main>
           {children}
         </main>
+        <Footer />
       </body>
-      {/* <Footer /> */}
     </html>
   )
 }

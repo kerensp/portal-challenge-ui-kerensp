@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function FindAllSection() {
   return (
     <Container
-      className="mx-auto px-4 md:px-0 flex flex-col-reverse flex-wrap items-center justify-center gap-4 md:gap-20 lg:flex-row"
+      className="!pb-0 mx-auto px-4 md:px-0 flex flex-col-reverse flex-wrap items-center justify-center gap-4 md:gap-20 lg:flex-row"
       aria-labelledby="find-all-heading"
     >
       <div className="relative h-[170px] w-[292px] overflow-hidden md:h-[355px] md:w-[612px] xl:h-[455px] xl:w-[782px]">
