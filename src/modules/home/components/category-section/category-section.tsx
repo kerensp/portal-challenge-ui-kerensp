@@ -23,7 +23,7 @@ export default function CategorySection({ categories }: Props) {
           align: 'center'
         }}
       >
-        <CarouselContent className="items-stretch justify-stretch gap-1">
+        <CarouselContent className="items-stretch justify-stretch">
           {categories?.map((category, idx) => (
             <CarouselItem
               key={idx}

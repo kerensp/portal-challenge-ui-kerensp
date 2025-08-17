@@ -9,6 +9,8 @@ import { getProductsByCategory } from '@/modules/common/services/product.service
 import RecommendedProducts from './recommended-products';
 import CategorySectionSkeleton from '../components/category-section/category-skeleton';
 import BannerCard from '@/components/core/banner-section/banner-card';
+import BestSellersProducts from './best-sellers-products';
+import ServicesSection from './services-section';
 
 const HomeContainer = async () => {
   const [heroBanners, stripBanners, promoBanner] = await Promise.all([
@@ -27,8 +29,8 @@ const HomeContainer = async () => {
       <Suspense fallback={<CategorySectionSkeleton />}>
         <CategorySection categories={categories?.data || []} />
       </Suspense>
-      
-      <div className="mx-auto flex w-full flex-col gap-4 px-4 xl:px-20 mb-4">
+
+      <div className="mx-auto flex flex-col gap-4 px-4 w-full md:w-[1447px] mb-8">
         <BannerCard
           banner={promoBanner[0]}
           withTransition={false}
@@ -40,6 +42,10 @@ const HomeContainer = async () => {
       <Suspense fallback={<BannerGridSkeleton />}>
         <BannerGrid banners={stripBanners} />
       </Suspense>
+
+      <BestSellersProducts products={products?.slice(5, 15)} />
+
+      <ServicesSection />
     </>
   );
 };

@@ -16,7 +16,7 @@ export const CategoryCard = ({ category, className }: Props) => {
     <Link href={`/category/${category?.slug}`} aria-label={category?.name}>
       <div
         className={cn(
-          "relative flex flex-col gap-2 items-center min-h-[156px] w-[139px] rounded-xl overflow-hidden cursor-pointer group transition-colors duration-300 px-6 pt-6 pb-3",
+          "relative flex flex-col gap-2 items-center min-h-[156px] w-[137px] rounded-xl overflow-hidden cursor-pointer group transition-colors duration-300 px-4 pt-6 pb-3",
           "bg-[#DADFF2] hover:bg-white",
           className
         )}

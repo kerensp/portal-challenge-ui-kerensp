@@ -106,9 +106,9 @@
     "id": "promo-1",
     "title": "Tu Farmacia Online de Confianza.",
     "desktop": {
-      "url": "/images/promos/promo-1.png",
-      "width": 85,
-      "height": 1445
+      "url": "/images/promos/promo-1.webp",
+      "width": 1447,
+      "height": 88
     },
     "mobile": {
       "url": "/images/promos/promo-1-mobile.webp",
