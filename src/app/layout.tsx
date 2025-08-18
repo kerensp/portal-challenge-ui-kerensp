@@ -80,7 +80,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           <Navbar categories={data || []} />
         </NavbarWrapper>
         <NavbarMenu className="hidden md:flex" />
-        <main>
+        <main className="flex-1 w-full mx-auto">
           {children}
         </main>
         <Footer />

@@ -7,7 +7,7 @@ type BannerCardProps = {
   banner: Banner;
   priority?: boolean;
   className?: string;
-  withTransition?: boolean; // 👈
+  withTransition?: boolean;
 };
 
 const BannerCard = ({

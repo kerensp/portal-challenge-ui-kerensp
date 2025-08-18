@@ -37,32 +37,32 @@ const ServicesSection = ({ className }: { className?: string }) => {
         alt=""
         width={50}
         height={60}
-        className="absolute -top-6 left-0 md:-left-4 lg:left-30 rotate-z-90"
+        className="absolute top-1/2 md:-top-6 left-0 md:-left-4 lg:left-30 rotate-z-90"
       />
       <Image
         src="/images/pill-vector.webp"
         alt=""
         width={50}
         height={60}
-        className="absolute -top-5 right--0 md:right-40"
+        className="absolute -top-5 right-0 md:right-40"
       />
       <Image
         src="/images/pill-vector.webp"
         alt=""
         width={80}
         height={80}
-        className="absolute -left-4 md:-bottom-7 md:left-60"
+        className="absolute -bottom-8 left-1/2 sm:-left-4 md:-bottom-7 md:left-60"
       />
 
-      <div className="mx-auto max-w-[1447px] flex flex-col md:flex-row items-start justify-between gap-6 z-10">
+      <div className="mx-auto w-full md:max-w-[1447px] flex flex-col md:flex-row items-center md:items-start justify-between gap-6 z-10">
         <h2 className="text-3xl md:text-4xl font-semibold leading-snug max-w-[400px]">
           Lo que Necesitas, <br /> Cuando lo Necesitas.
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 z-10 px-4">
           {services.map((item, idx) => (
             <div
               key={idx}
-              className="w-[276px] rounded-xl p-6 shadow-md bg-white"
+              className="md:!w-[276px] rounded-xl p-6 shadow-md bg-white"
             >
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary text-white bg-warning">
                 {item?.icon}

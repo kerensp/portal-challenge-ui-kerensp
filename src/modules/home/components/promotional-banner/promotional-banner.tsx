@@ -20,7 +20,7 @@ export default function PromotionalBanner({ banner }: { banner: Banner }) {
 
         {banner?.products && (
           <div
-            className="w-full mt-4 lg:mt-0  lg:absolute lg:top-1/2 lg:right-4  lg:-translate-y-1/2 lg:w-1/2"
+            className="w-full mt-4 lg:mt-0 lg:absolute lg:top-1/2 lg:right-4 lg:-translate-y-1/2 lg:w-1/2"
             aria-label="Productos en promoción"
           >
             <Carousel className="w-full">

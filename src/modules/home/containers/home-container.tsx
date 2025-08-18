@@ -35,7 +35,7 @@ const HomeContainer = async () => {
         <CategorySection categories={categories?.data || []} />
       </Suspense>
 
-      <div className="mx-auto flex flex-col gap-4 px-4 w-full md:w-[1447px] mb-8">
+      <div className="mx-auto flex flex-col gap-4 px-4 w-full md:max-w-[1447px] mb-8">
         <BannerCard
           banner={promoBanner[0]}
           withTransition={false}

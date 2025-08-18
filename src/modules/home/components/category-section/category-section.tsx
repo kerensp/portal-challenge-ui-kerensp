@@ -27,7 +27,7 @@ export default function CategorySection({ categories }: Props) {
           {categories?.map((category, idx) => (
             <CarouselItem
               key={idx}
-              className="basis-[135px]/2 xs:basis-1/5 md:basis-1/6 lg:basis-1/7 2xl:!basis-1/9"
+              className="basis-1/2 sm:basis-1/4 md:basis-1/6 lg:basis-1/7 2xl:!basis-1/9"
             >
               <CategoryCard key={category?._id || idx} category={category} />
             </CarouselItem>

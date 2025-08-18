@@ -5,10 +5,10 @@ import Link from "next/link";
 export default function FindAllSection() {
   return (
     <Container
-      className="!pb-0 mx-auto px-4 md:px-0 flex flex-col-reverse flex-wrap items-center justify-center gap-4 md:gap-20 lg:flex-row"
+      className="!pb-0 mx-auto md:px-0 flex flex-col-reverse flex-wrap items-center justify-center gap-4 md:gap-20 lg:flex-row"
       aria-labelledby="find-all-heading"
     >
-      <div className="relative h-[170px] w-[292px] overflow-hidden md:h-[355px] md:w-[612px] xl:h-[455px] xl:w-[782px]">
+      <div className="relative h-[250px] w-[355px] md:h-[355px] md:w-[612px] xl:h-[455px] xl:w-[782px]">
         <Image
           src="/images/products-car.webp"
           alt="Encuentra medicamentos, suplementos y más en un solo lugar"
@@ -21,10 +21,10 @@ export default function FindAllSection() {
         />
       </div>
 
-      <div className="flex-1">
+      <div className="flex-1 px-4">
         <h2
           id="find-all-heading"
-          className="text-[42px] font-bold text-primary max-w-[475px] leading-12"
+          className="text-4xl md:text-[42px] font-bold text-primary max-w-[475px] leading-10 md:leading-12"
         >
           Encuentra todo en un solo lugar.
         </h2>
