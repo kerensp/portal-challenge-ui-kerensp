@@ -1,9 +1,9 @@
 'use client';
-import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
-import { LayoutGridIcon, Search, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { ICategory } from '@/definitions/category.interface';
 import { useSearchBar } from '@/hooks/useSearchBar';
+import CategoryMenu from '@/modules/category/components/category-menu/category-menu';
 
 type Props = {
   mobile?: boolean;
@@ -18,22 +18,12 @@ export default function SearchBar({ categories, initialParams, mobile }: Props) 
   return (
     <div className="flex w-full xl:min-w-2xl">
       {!mobile &&
-        <Select value={category} onValueChange={setCategory}>
-          <SelectTrigger
-            aria-label="Seleccionar categoría"
-            className="btn rounded-l-md w-[140px] !bg-[var(--color-primary)] text-white"
-          >
-            <LayoutGridIcon className='w-5 h-5' />
-            <SelectValue placeholder={'Categoría'} />
-          </SelectTrigger>
-          <SelectContent>
-            {categories?.map((cat) => (
-              <SelectItem key={cat?._id} value={cat?.slug}>
-                {cat?.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <CategoryMenu
+          categories={categories as ICategory[]}
+          category={category}
+          setCategory={setCategory}
+          className='max-w-[140px]'
+        />
       }
 
       <div className="relative flex-1">

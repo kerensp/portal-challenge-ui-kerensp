@@ -12,10 +12,10 @@ const ProfileMenu = memo(function UserAvatar() {
       <Avatar
         aria-label="user-avatar"
         role="button"
-        className="sm:w-unset w-[39px] min-w-[39px] bg-slate-50 hover:cursor-pointer hover:bg-slate-100 [&>div]:!rounded-[39px]"
+        className="sm:w-unset w-[39px] min-w-[39px] bg-primary hover:cursor-pointer [&>div]:!rounded-[39px]"
       >
         <AvatarFallback>
-          <User className="text-primary" />
+          <User className="text-white" />
         </AvatarFallback>
       </Avatar>
     </Suspense>

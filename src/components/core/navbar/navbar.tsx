@@ -16,13 +16,13 @@ type Props = {
 
 const Navbar = ({ categories }: Props) => {
   return (
-    <Container className="bg-white">
+    <Container className="bg-white !pt-6">
       <nav className="w-full mx-auto">
         <div className="flex items-center justify-between gap-4 md:gap-6">
           <div className="flex items-center gap-2">
             <MobileMenu />
             <Link href="/">
-              <h2 className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors font-inter">
+              <h2 className="text-xl md:text-3xl font-bold text-[#2B3445] font-inter">
                 Botifarma
               </h2>
             </Link>
