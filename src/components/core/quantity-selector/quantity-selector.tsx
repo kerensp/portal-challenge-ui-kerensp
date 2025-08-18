@@ -9,6 +9,7 @@ type Props = {
   initial?: number;
   min?: number;
   max?: number;
+  size?: "sm" | "default" | "lg" | "icon";
   className?: string;
 };
 
@@ -17,6 +18,7 @@ const QuantitySelector = ({
   initial = 1,
   min = 1,
   max,
+  size = "sm",
 }: Props) => {
   const [value, setValue] = useState(initial);
 
@@ -39,12 +41,12 @@ const QuantitySelector = ({
   return (
     <div
       className={cn(
-        "flex items-center cursor-pointer bg-white h-9 rounded-md overflow-hidden hover:border-gray-700",
+        "flex items-center cursor-pointer bg-white rounded-md overflow-hidden hover:border-gray-700",
         className
       )}
     >
       <Button
-        size="sm"
+        size={size}
         variant="ghost"
         className="rounded-none text-muted-foreground hover:bg-muted hover:text-foreground"
         onClick={handleDecrement}

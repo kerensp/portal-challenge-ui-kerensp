@@ -12,9 +12,10 @@ import {
 
 type ProductCarouselProps = {
   products: IProduct[];
+  noButtons?: boolean;
 };
 
-const ProductCarousel = ({ products }: ProductCarouselProps) => {
+const ProductCarousel = ({ products, noButtons = false }: ProductCarouselProps) => {
   return (
     <div className="relative">
       <Carousel
@@ -34,8 +35,12 @@ const ProductCarousel = ({ products }: ProductCarouselProps) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        {!noButtons &&
+          <>
+            <CarouselPrevious />
+            <CarouselNext />
+          </>
+        }
         <CarouselDots className="mt-6" />
       </Carousel>
     </div>
