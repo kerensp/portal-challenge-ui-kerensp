@@ -23,11 +23,11 @@ export const metadata = {
 };
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export default async function ProductPage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   const product = await getProductBySlug(slug);
 
   if (!product) {
