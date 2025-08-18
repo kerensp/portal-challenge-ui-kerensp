@@ -33,6 +33,7 @@ export default function MobileMenu() {
                 {MENU.map((item) => (
                   <li key={item?.title}>
                     <Link
+                      aria-label='Navegar'
                       href={item?.path}
                       className="block py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
                     >

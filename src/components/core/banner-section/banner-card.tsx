@@ -18,6 +18,7 @@ const BannerCard = ({
 }: BannerCardProps) => {
   return (
     <Link
+      arial-label='Ver banner'
       href={banner?.href || "/"}
       className={cn(
         "group relative block overflow-hidden rounded-lg shadow-md",

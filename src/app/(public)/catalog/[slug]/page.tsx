@@ -1,45 +1,33 @@
 import Container from '@/components/ui/container';
-import { getProductBySlug } from '@/modules/common/services/product.service';
 import ProductDetailContainer from '@/modules/product/container/product-detail-container';
+import { getProductBySlug } from '@/modules/common/services/product.service';
 
 export const revalidate = 60;
 export const dynamicParams = true;
 
-type Props = {
-  params: Promise<{ slug: string }>;
+export const metadata = {
+  title: "Detalle de producto | Farmacia Online",
+  description: "Explora nuestra farmacia online con productos disponibles.",
+  openGraph: {
+    title: "Detalle de producto | Farmacia Online",
+    description: "Explora nuestra farmacia online con productos disponibles.",
+    images: [
+      {
+        url: "/images/og-graph.png",
+        width: 1200,
+        height: 630,
+        alt: "Detalle de producto",
+      },
+    ],
+  },
 };
 
-export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
-  const product = await getProductBySlug(slug);
-
-  if (!product) {
-    return {
-      title: "Producto no encontrado",
-      description: "Este producto no existe",
-    };
-  }
-
-  return {
-    title: product.name,
-    description: product.description || "Detalle de producto",
-    openGraph: {
-      title: product.name,
-      description: product.description || "Detalle de producto",
-      images: [
-        {
-          url: product.media?.url || "/images/og-graph.png",
-          width: 1200,
-          height: 630,
-          alt: product.name,
-        },
-      ],
-    },
-  };
-}
+type Props = {
+  params: { slug: string };
+};
 
 export default async function ProductPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug } = params;
   const product = await getProductBySlug(slug);
 
   if (!product) {

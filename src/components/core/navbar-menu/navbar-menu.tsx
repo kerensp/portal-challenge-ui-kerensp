@@ -16,6 +16,7 @@ const NavbarMenu = ({ className }: { className?: string }) => {
       >
         {MENU.map((item, idx) => (
           <Link
+            aria-label='Ver categoría'
             key={`${item?.path}-${idx}`}
             href={item?.path}
             className="text-[16px] font-light text-white hover:font-medium"

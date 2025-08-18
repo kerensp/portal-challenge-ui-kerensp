@@ -2,6 +2,7 @@ import React from "react";
 import FooterSubscribeInput from "./footer-subscribe-input";
 import { MailIcon, PhoneIcon } from "lucide-react";
 import Container from '@/components/ui/container';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -20,21 +21,22 @@ const Footer = () => {
           <div className="flex flex-col gap-2 max-w-[420px]">
             <FooterSubscribeInput />
             <p className="pl-2 md:pl-4 text-sm font-normal text-white font-inter">
-              Al suscribirte aceptas nuestros <a
+              Al suscribirte aceptas nuestros
+              <Link
                 href="/terminos-y-condiciones"
                 className="text-warning underline hover:text-white transition-colors"
                 aria-label="Leer términos y condiciones"
               >
                 Términos y Condiciones
-              </a>{" "}
+              </Link>{" "}
               y{" "}
-              <a
+              <Link
                 href="/politica-de-privacidad"
                 className="text-warning underline hover:text-white transition-colors"
                 aria-label="Leer política de privacidad"
               >
                 Política de privacidad
-              </a>
+              </Link>
             </p>
           </div>
         </section>

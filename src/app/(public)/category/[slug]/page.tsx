@@ -1,6 +1,6 @@
 import Container from '@/components/ui/container';
 import CategoryDetailContainer from '@/modules/category/container/category-detail-container';
-import { getCategories, getCategoryBySlug } from '@/modules/category/services/category.service';
+import { getCategoryBySlug } from '@/modules/category/services/category.service';
 import { getProductsByCategory } from '@/modules/common/services/product.service';
 import { notFound } from "next/navigation";
 
@@ -8,13 +8,8 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  const categories = await getCategories();
-  return categories?.data?.map((c) => ({ slug: c.slug }));
-}
-
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params; 
+  const { slug } = await params;
   const category = await getCategoryBySlug(slug);
 
   if (!category) {
@@ -40,9 +35,8 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-// Página
 export default async function CategoryPage({ params }: Props) {
-  const { slug } = await params; // 👈 igual aquí
+  const { slug } = await params;
   const category = await getCategoryBySlug(slug);
 
   if (!category) return notFound();

@@ -8,13 +8,17 @@ type CarouselProps = React.HTMLAttributes<HTMLDivElement> & {
   opts?: Parameters<typeof useEmblaCarousel>[0];
 };
 
-const CarouselContext = React.createContext<{
+type CarouselContextType = {
   embla: UseEmblaCarouselType[1] | null;
   selectedIndex: number;
   scrollTo: (index: number) => void;
   scrollPrev: () => void;
   scrollNext: () => void;
-}>(null as any);
+};
+
+const CarouselContext = React.createContext<CarouselContextType | undefined>(
+  undefined
+);
 
 export function Carousel({ opts, className, children, ...props }: CarouselProps) {
   const [emblaRef, embla] = useEmblaCarousel(opts);
@@ -37,7 +41,9 @@ export function Carousel({ opts, className, children, ...props }: CarouselProps)
   }, [embla]);
 
   return (
-    <CarouselContext.Provider value={{ embla, selectedIndex, scrollTo, scrollPrev, scrollNext }}>
+    <CarouselContext.Provider
+      value={{ embla, selectedIndex, scrollTo, scrollPrev, scrollNext }}
+    >
       <div className={cn("relative w-full", className)} {...props}>
         <div ref={emblaRef} className="overflow-hidden">
           {children}
@@ -58,9 +64,12 @@ export function CarouselItem({ className, ...props }: React.HTMLAttributes<HTMLD
 }
 
 export function CarouselDots({ className }: { className?: string }) {
-  const { embla, selectedIndex, scrollTo } = React.useContext(CarouselContext);
+  const context = React.useContext(CarouselContext);
+  if (!context) return null;
 
+  const { embla, selectedIndex, scrollTo } = context;
   if (!embla) return null;
+
   const dots = embla.scrollSnapList();
 
   return (
@@ -73,8 +82,8 @@ export function CarouselDots({ className }: { className?: string }) {
             aria-label={`Ir al slide ${index + 1}`}
             onClick={() => scrollTo(index)}
             className={cn(
-              "h-2 rounded-full transition-all duration-300",
-              isActive ? "w-6 bg-warning" : "w-2 bg-gray-300"
+              "h-4 rounded-full transition-all duration-300",
+              isActive ? "w-10 bg-warning" : "w-4 bg-gray-300"
             )}
           />
         );
@@ -84,7 +93,10 @@ export function CarouselDots({ className }: { className?: string }) {
 }
 
 export function CarouselPrevious({ className }: { className?: string }) {
-  const { scrollPrev } = React.useContext(CarouselContext);
+  const context = React.useContext(CarouselContext);
+  if (!context) return null;
+
+  const { scrollPrev } = context;
 
   return (
     <button
@@ -102,7 +114,10 @@ export function CarouselPrevious({ className }: { className?: string }) {
 }
 
 export function CarouselNext({ className }: { className?: string }) {
-  const { scrollNext } = React.useContext(CarouselContext);
+  const context = React.useContext(CarouselContext);
+  if (!context) return null;
+
+  const { scrollNext } = context;
 
   return (
     <button

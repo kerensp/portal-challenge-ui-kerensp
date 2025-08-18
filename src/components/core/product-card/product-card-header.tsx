@@ -16,17 +16,15 @@ const ProductCardHeader = ({ product, imgClassName, className }: Props) => {
     <CardHeader className={cn("relative h-[180px] md:h-[240px] p-0 overflow-hidden group", className)}>
       <div className="absolute inset-0">
         <Image
-          src={product?.media?.url || "/images/placeholder.webp"}
+          src={product?.media?.url || "/images/no-image.webp"}
           alt={product?.name}
           fill
           className={cn(
             "object-cover object-center transition-transform duration-500 ease-out",
-            "group-hover:scale-110 group-hover:rotate-1", // zoom + tilt
+            "group-hover:scale-110 group-hover:rotate-1",
             imgClassName,
           )}
           sizes="(max-width: 768px) 100vw, 33vw"
-          placeholder="blur"
-          blurDataURL="/images/placeholder.webp"
           priority={false}
         />
       </div>

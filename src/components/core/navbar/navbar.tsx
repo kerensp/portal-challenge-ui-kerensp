@@ -21,7 +21,7 @@ const Navbar = ({ categories }: Props) => {
         <div className="flex items-center justify-between gap-4 md:gap-6">
           <div className="flex items-center gap-2">
             <MobileMenu />
-            <Link href="/">
+            <Link href="/" aria-label='Ir a inicio'>
               <h2 className="text-xl md:text-3xl font-bold text-[#2B3445] font-inter">
                 Botifarma
               </h2>

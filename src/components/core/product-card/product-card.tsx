@@ -16,7 +16,7 @@ type Props = {
 
 const ProductCard = ({ product, imageClassName, className }: Props) => {
   return (
-    <Link href={`/catalog/${product.slug}`} prefetch={true}>
+    <Link href={`/catalog/${product.slug}`} prefetch={true} aria-label='Ver producto'>
       <Card
         className={cn(
           "relative overflow-hidden rounded-[15px] bg-[rgba(255, 255, 255, 0.50)] shadow-[0_20px_30px_0px_rgba(43,52,69,0.04)] backdrop-blur-[8.5px] transition hover:shadow-lg border-none",

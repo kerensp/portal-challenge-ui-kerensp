@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { MailIcon } from "lucide-react";
 
 const FooterSubscribeInput = ({ className }: { className?: string }) => {
-  const { onSubmit, isLoading, isSuccess, error, ...form } = useFooterSubscribe()
+  const { onSubmit, isLoading, isSuccess, ...form } = useFooterSubscribe()
 
   return (
     <div className={cn("flex-1 w-full relative pl-2", className)}>
