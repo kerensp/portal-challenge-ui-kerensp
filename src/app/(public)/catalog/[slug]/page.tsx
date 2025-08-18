@@ -5,14 +5,19 @@ import ProductDetailContainer from '@/modules/product/container/product-detail-c
 export const revalidate = 60;
 export const dynamicParams = true;
 
-export async function generateMetadata({ params }: { params: string }) {
-  const product = await getProductBySlug(params)
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     return {
       title: "Producto no encontrado",
       description: "Este producto no existe",
-    }
+    };
   }
 
   return {
@@ -21,13 +26,21 @@ export async function generateMetadata({ params }: { params: string }) {
     openGraph: {
       title: product.name,
       description: product.description || "Detalle de producto",
-      image: product.media?.url
+      images: [
+        {
+          url: product.media?.url || "/images/og-graph.png",
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
     },
-  }
+  };
 }
 
-export default async function ProductPage({ params }: { params: { slug: string } }) {
-  const product = await getProductBySlug(params?.slug)
+export default async function ProductPage({ params }: Props) {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     return (
@@ -37,12 +50,12 @@ export default async function ProductPage({ params }: { params: { slug: string }
           Lo sentimos, el producto que buscas no existe o fue eliminado.
         </p>
       </div>
-    )
+    );
   }
 
   return (
     <Container>
       <ProductDetailContainer product={product} />
     </Container>
-  )
+  );
 }
