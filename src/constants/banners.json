@@ -1,0 +1,243 @@
+[
+  {
+    "_id": "banner-principal",
+    "title": "Envía Salud y Bienestar a tus seres queridos",
+    "desktop": {
+      "url": "/images/banners/main-desktop.webp",
+      "width": 959,
+      "height": 474
+    },
+    "mobile": {
+      "url": "/images/banners/main-mobile.webp",
+      "width": 390,
+      "height": 240
+    },
+    "href": "/ofertas",
+    "position": "main",
+    "variant": "hero"
+  },
+  {
+    "_id": "banner-secundario-1",
+    "title": "Cuida a los pequeños de casa con amor",
+    "desktop": {
+      "url": "/images/banners/top-desktop.webp",
+      "width": 468,
+      "height": 227
+    },
+    "mobile": {
+      "url": "/images/banners/top-mobile.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/ofertas",
+    "position": "side-top",
+    "variant": "hero"
+  },
+  {
+    "_id": "banner-secundario-2",
+    "title": "¡Salud al Mejor Precio!",
+    "alt": "Frascos de medicamentos",
+    "desktop": {
+      "url": "/images/banners/bottom-desktop.webp",
+      "width": 468,
+      "height": 227
+    },
+    "mobile": {
+      "url": "/images/banners/bottom-desktop.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/ofertas",
+    "position": "side-bottom",
+    "variant": "hero"
+  },
+  {
+    "_id": "banner-grid-1",
+    "title": "Complejo B+Ginseng",
+    "desktop": {
+      "url": "/images/banners/grid-1.webp",
+      "width": 380,
+      "height": 200
+    },
+    "mobile": {
+      "url": "/images/banners/grid-1-mobile.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/catalog/complejo-b-ginseng",
+    "position": "grid-1",
+    "variant": "grid"
+  },
+  {
+    "_id": "banner-grid-2",
+    "title": "Maxivis Suplemento Alimenticio",
+    "desktop": {
+      "url": "/images/banners/grid-2.webp",
+      "width": 380,
+      "height": 200
+    },
+    "mobile": {
+      "url": "/images/banners/grid-2-mobile.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/catalog/maxivis",
+    "position": "grid-2",
+    "variant": "grid"
+  },
+  {
+    "_id": "banner-grid-3",
+    "title": "Mentol Chino",
+    "desktop": {
+      "url": "/images/banners/grid-3.webp",
+      "width": 380,
+      "height": 200
+    },
+    "mobile": {
+      "url": "/images/banners/grid-3-mobile.webp",
+      "width": 390,
+      "height": 190
+    },
+    "href": "/catalog/mentol-chino",
+    "position": "grid-3",
+    "variant": "grid"
+  },
+  {
+    "_id": "promo-1",
+    "title": "Tu Farmacia Online de Confianza.",
+    "desktop": {
+      "url": "/images/promos/promo-1.webp",
+      "width": 1447,
+      "height": 88
+    },
+    "mobile": {
+      "url": "/images/promos/promo-1-mobile.webp",
+      "width": 388,
+      "height": 188
+    },
+    "href": "/catalog",
+    "position": "main",
+    "variant": "promo"
+  },
+  {
+    "_id": "recent-product-banner",
+    "title": "Tu Farmacia Online de Confianza.",
+    "desktop": {
+      "url": "/images/recent-banner/recent-banner.webp",
+      "width": 570,
+      "height": 405
+    },
+    "mobile": {
+      "url": "/images/recent-banner/recent-banner.webp",
+      "width": 390,
+      "height": 277
+    },
+    "href": "/catalog",
+    "position": "main",
+    "variant": "recent-products"
+  },
+  {
+    "_id": "promotional-banner",
+    "title": "¡Ahorra en tu Cuidado!",
+    "desktop": {
+      "url": "/images/banner-products/banner-products.webp",
+      "width": 1447,
+      "height": 85
+    },
+    "mobile": {
+      "url": "/images/banner-products/banner-products-mobile.webp",
+      "width": 388,
+      "height": 188
+    },
+    "products": [
+      {
+        "_id": "product-1",
+        "slug": "maxivis",
+        "category": "vitaminas",
+        "media": {
+          "url": "/images/banner-products/product-1.webp",
+          "width": 100,
+          "height": 103
+        },
+        "price": 25.5,
+        "name": "Maxivis",
+        "rating": 4,
+        "description": "Suplemento de vitamina B con nicotinamida que apoya la función nerviosa, mejora el metabolismo energético y ayuda a reducir la fatiga."
+      },
+      {
+        "_id": "product-2",
+        "slug": "mentol-chino",
+        "category": "analgesicos-antiflamatorios",
+        "media": {
+          "url": "/images/banner-products/product-2.webp",
+          "width": 100,
+          "height": 103
+        },
+        "price": 25.5,
+        "name": "Mentol Chino",
+        "rating": 4,
+        "description": "El Mentol Chino en presentación de 500g alivia dolores musculares, relaja articulaciones y proporciona frescura inmediata."
+      },
+      {
+        "_id": "product-3",
+        "slug": "tonwas",
+        "category": "vitaminas",
+        "media": {
+          "url": "/images/banner-products/product-3.webp",
+          "width": 100,
+          "height": 103
+        },
+        "price": 15,
+        "name": "Tonwas - Complejo B + Ginseng",
+        "rating": 4,
+        "description": "Suplemento de vitamina B con nicotinamida que apoya la función nerviosa, mejora el metabolismo energético y ayuda a reducir la fatiga."
+      },
+      {
+        "_id": "product-4",
+        "slug": "medox-jarabe",
+        "category": "mucolitico-antitusivo",
+        "media": {
+          "url": "/images/banner-products/product-4.webp",
+          "width": 100,
+          "height": 103
+        },
+        "price": 25.5,
+        "name": "Medox ABC Jarabe",
+        "rating": 4,
+        "discount": -50.0,
+        "description": "Medox ABC Jarabe ayuda en el tratamiento de afecciones respiratorias, alivia la tos y fortalece las defensas del organismo."
+      },
+      {
+        "_id": "product-5",
+        "slug": "dominal-paracetamol",
+        "category": "analgesicos-antiflamatorios",
+        "media": {
+          "url": "/images/banner-products/product-5.webp",
+          "width": 100,
+          "height": 103
+        },
+        "price": 26.5,
+        "name": "Dominal Paracetamol 500mg",
+        "rating": 4,
+        "description": "Dominal con paracetamol 500mg ofrece un alivio eficaz para dolores comunes y contribuye a la reducción de la fiebre."
+      },
+      {
+        "_id": "product-6",
+        "slug": "citramag",
+        "category": "antidiarreico-laxantes",
+        "media": {
+          "url": "/images/banner-products/product-6.webp",
+          "width": 100,
+          "height": 103
+        },
+        "price": 35.5,
+        "name": "Citramag",
+        "rating": 4,
+        "description": "Citramag combina magnesio y vitamina C para apoyar la salud muscular y ósea, además de contribuir al equilibrio digestivo."
+      }
+    ],
+    "href": "/catalog",
+    "position": "main",
+    "variant": "with-products"
+  }
+]

@@ -1,0 +1,229 @@
+[
+  {
+    "_id": "product-1",
+    "slug": "luvit-ampolla-inyectable",
+    "category": "vitaminas",
+    "media": {
+      "url": "/images/products/luvit-ampolla.webp",
+      "thumb": "/images/products/luvit-ampolla-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 1.5,
+    "name": "Luvit Ampolla inyectable",
+    "rating": 4,
+    "isNew": true,
+    "description": "Luvit en ampolla inyectable fortalece el sistema inmunológico, aporta energía y mejora la recuperación física y mental."
+  },
+  {
+    "_id": "product-2",
+    "slug": "vitamina-b-nicotinamida",
+    "category": "vitaminas",
+    "media": {
+      "url": "/images/products/vitamina-b.webp",
+      "thumb": "/images/products/vitamina-b-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 25.5,
+    "name": "Vitamina B, Nicotinamida",
+    "rating": 4,
+    "description": "Suplemento de vitamina B con nicotinamida que apoya la función nerviosa, mejora el metabolismo energético y ayuda a reducir la fatiga."
+  },
+  {
+    "_id": "product-3",
+    "slug": "neurobion",
+    "category": "vitaminas",
+    "media": {
+      "url": "/images/products/neurobion.webp",
+      "thumb": "/images/products/neurobion-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 10.5,
+    "name": "Neurobion",
+    "rating": 5,
+    "description": "Neurobion combina vitaminas del complejo B para fortalecer el sistema nervioso, mejorar la concentración y prevenir el cansancio."
+  },
+  {
+    "_id": "product-4",
+    "slug": "gerber-gom-mast",
+    "category": "vitaminas",
+    "media": {
+      "url": "/images/products/gerber.webp",
+      "thumb": "/images/products/gerber-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 10.5,
+    "name": "Gerber GOM MAST",
+    "rating": 4,
+    "description": "Gerber GOM MAST es un suplemento diseñado para reforzar la salud general y apoyar el rendimiento físico y la vitalidad."
+  },
+  {
+    "_id": "product-5",
+    "slug": "mentol-chino",
+    "category": "analgesicos-antiflamatorios",
+    "media": {
+      "url": "/images/products/mentol-chino.webp",
+      "thumb": "/images/products/mentol-chino-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 12.5,
+    "name": "Mentol Chino 500g",
+    "rating": 4,
+    "description": "El Mentol Chino en presentación de 500g alivia dolores musculares, relaja articulaciones y proporciona frescura inmediata."
+  },
+  {
+    "_id": "product-6",
+    "slug": "neuressens",
+    "category": "antidiarreico-laxantes",
+    "media": {
+      "url": "/images/products/neuressens.webp",
+      "thumb": "/images/products/neuressens-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 75.5,
+    "name": "Neuressens",
+    "rating": 4,
+    "description": "Neuressens es un suplemento avanzado formulado para favorecer el buen funcionamiento del sistema nervioso y contribuir al equilibrio mental."
+  },
+  {
+    "_id": "product-7",
+    "slug": "medox-jarabe",
+    "category": "mucolitico-antitusivo",
+    "media": {
+      "url": "/images/products/medox.webp",
+      "thumb": "/images/products/medox-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 25.5,
+    "name": "Medox ABC Jarabe",
+    "rating": 4,
+    "discount": -50.0,
+    "description": "Medox ABC Jarabe ayuda en el tratamiento de afecciones respiratorias, alivia la tos y fortalece las defensas del organismo."
+  },
+  {
+    "_id": "product-8",
+    "slug": "dominal-paracetamol",
+    "category": "analgesicos-antiflamatorios",
+    "media": {
+      "url": "/images/products/paracetamol.webp",
+      "thumb": "/images/products/paracetamol-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 26.5,
+    "name": "Dominal Paracetamol 500mg",
+    "rating": 4,
+    "description": "Dominal con paracetamol 500mg ofrece un alivio eficaz para dolores comunes y contribuye a la reducción de la fiebre."
+  },
+  {
+    "_id": "product-9",
+    "slug": "diflox",
+    "category": "antiinfecciosos",
+    "media": {
+      "url": "/images/products/diflox.webp",
+      "thumb": "/images/products/diflox-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 75.5,
+    "name": "Diflox",
+    "rating": 4,
+    "description": "Diflox es un medicamento de uso controlado indicado para tratar infecciones bacterianas específicas bajo prescripción médica."
+  },
+  {
+    "_id": "product-10",
+    "slug": "analgan-rapid-paracetamol",
+    "category": "vitaminas",
+    "media": {
+      "url": "/images/products/analgan.webp",
+      "thumb": "/images/products/analgan-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 75.5,
+    "name": "Analgan Rapid Paracetamol",
+    "rating": 4,
+    "description": "Analgan Rapid con paracetamol brinda un alivio rápido y efectivo contra el dolor, ayudando a reducir la fiebre de manera segura."
+  },
+  {
+    "_id": "product-11",
+    "slug": "vitamina-c",
+    "category": "vitaminas",
+    "media": {
+      "url": "/images/products/vitamina-c.webp",
+      "thumb": "/images/products/vitamina-c-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 10.5,
+    "name": "Vitamina C",
+    "rating": 4,
+    "description": "Vitamina C en suplemento diario que fortalece el sistema inmunológico, ayuda a la absorción de hierro y protege contra el daño oxidativo."
+  },
+  {
+    "_id": "product-12",
+    "slug": "citramag",
+    "category": "antidiarreico-laxantes",
+    "media": {
+      "url": "/images/products/citramag.webp",
+      "thumb": "/images/products/citramag-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 35.5,
+    "name": "Citramag",
+    "rating": 4,
+    "description": "Citramag combina magnesio y vitamina C para apoyar la salud muscular y ósea, además de contribuir al equilibrio digestivo."
+  },
+  {
+    "_id": "product-13",
+    "slug": "desinflamex-forte",
+    "category": "analgesicos-antiflamatorios",
+    "media": {
+      "url": "/images/products/desinflamex.webp",
+      "thumb": "/images/products/desinflamex-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 10.5,
+    "name": "Desinflamex Forte",
+    "rating": 4,
+    "description": "Desinflamex Forte está formulado para reducir la inflamación y aliviar el dolor muscular y articular de forma eficaz."
+  },
+  {
+    "_id": "product-14",
+    "slug": "x-ray-dol",
+    "category": "antipireticos",
+    "media": {
+      "url": "/images/products/x-ray-dol.webp",
+      "thumb": "/images/products/x-ray-dol-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 15.5,
+    "name": "X Ray Dol TABx250",
+    "rating": 4,
+    "description": "X Ray Dol en presentación de 250 tabletas, indicado para el tratamiento de molestias musculares y fiebre."
+  },
+  {
+    "_id": "product-15",
+    "slug": "aspirina-advance",
+    "category": "mucolitico-antitusivo",
+    "media": {
+      "url": "/images/products/aspirina.webp",
+      "thumb": "/images/products/aspirina-thumb.webp",
+      "height": 240,
+      "width": 276
+    },
+    "price": 12.3,
+    "name": "Aspirina Advance",
+    "rating": 4,
+    "description": "Aspirina Advance ofrece alivio rápido contra el dolor de cabeza, molestias musculares y ayuda a disminuir la fiebre."
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "_id": "category-1",
+    "name": "Vitaminas",
+    "description": "Las vitaminas son nutrientes esenciales que el cuerpo necesita para funcionar correctamente. Contribuyen al fortalecimiento del sistema inmunológico, ayudan al metabolismo energético, favorecen el desarrollo celular y mantienen la salud de huesos, piel y órganos vitales. Su consumo adecuado es fundamental para prevenir deficiencias nutricionales y mantener un estilo de vida saludable.",
+    "slug": "vitaminas",
+    "icon": "VitaminsIcon"
+  },
+  {
+    "_id": "category-2",
+    "name": "Analgésicos y antiinflamatorios",
+    "description": "Los analgésicos y antiinflamatorios son medicamentos diseñados para aliviar el dolor y reducir la inflamación en diferentes partes del cuerpo. Son ampliamente utilizados en el tratamiento de dolores musculares, articulares, cefaleas, fiebre y procesos inflamatorios causados por lesiones o enfermedades crónicas. Su uso responsable mejora la calidad de vida al controlar síntomas que limitan la actividad diaria.",
+    "slug": "analgesicos-antiflamatorios",
+    "icon": "AnalgesicsIcon"
+  },
+  {
+    "_id": "category-3",
+    "name": "Antiinfecciosos",
+    "description": "Los antiinfecciosos son fármacos que combaten y eliminan microorganismos dañinos como bacterias, virus, hongos y parásitos. Son esenciales en el tratamiento de infecciones comunes y graves, contribuyendo a la recuperación del paciente y a la prevención de complicaciones. Incluyen antibióticos, antivirales, antifúngicos y antiparasitarios, cada uno específico para diferentes tipos de infecciones.",
+    "slug": "antiinfecciosos",
+    "icon": "AntiInfectiousIcon"
+  },
+  {
+    "_id": "category-4",
+    "name": "Mucolítico y antitusivos",
+    "description": "Los medicamentos mucolíticos y antitusivos ayudan a aliviar problemas respiratorios frecuentes como la tos y la acumulación de mucosidad en los bronquios. Los mucolíticos fluidifican y facilitan la expulsión de las secreciones, mientras que los antitusivos reducen la frecuencia de la tos seca e irritativa. Son recomendados para mejorar la comodidad del paciente durante procesos gripales, resfriados o enfermedades respiratorias.",
+    "slug": "mucolitico-antitusivo",
+    "icon": "AntitussivesIcon"
+  },
+  {
+    "_id": "category-5",
+    "name": "Antiulcerosos y antiácidos",
+    "description": "Los antiulcerosos y antiácidos son medicamentos que ayudan a controlar la producción de ácido en el estómago, previniendo y aliviando molestias como acidez, reflujo gastroesofágico y úlceras gástricas. Contribuyen a proteger la mucosa estomacal, mejorar la digestión y reducir síntomas molestos que afectan la vida diaria. Su uso adecuado es clave en el tratamiento de trastornos digestivos crónicos.",
+    "slug": "antiulceroso-antiacido",
+    "icon": "AntacidsIcon"
+  },
+  {
+    "_id": "category-6",
+    "name": "Antidiarreicos y laxantes",
+    "description": "Los antidiarreicos y laxantes son medicamentos destinados a regular el tránsito intestinal. Los antidiarreicos ayudan a controlar la pérdida excesiva de líquidos y electrolitos causada por episodios de diarrea, mientras que los laxantes favorecen la evacuación en casos de estreñimiento. Ambos grupos son fundamentales para mantener el equilibrio digestivo y mejorar el bienestar gastrointestinal.",
+    "slug": "antidiarreico-laxantes",
+    "icon": "AntidiarrhealsIcon"
+  },
+  {
+    "_id": "category-7",
+    "name": "Antipiréticos",
+    "description": "Los antipiréticos son medicamentos utilizados para reducir la fiebre y aliviar el malestar asociado a infecciones, resfriados, gripes y otros procesos inflamatorios. Su acción contribuye a estabilizar la temperatura corporal, mejorando la sensación de bienestar y facilitando la recuperación. Son seguros y eficaces cuando se usan siguiendo las recomendaciones médicas.",
+    "slug": "antipireticos",
+    "icon": "AntipyreticsIcon"
+  },
+  {
+    "_id": "category-8",
+    "name": "Antialérgicos",
+    "description": "Los antialérgicos son fármacos diseñados para aliviar síntomas ocasionados por reacciones alérgicas como estornudos, picazón, lagrimeo, urticaria o congestión nasal. Actúan bloqueando la acción de la histamina, sustancia responsable de los síntomas alérgicos. Son recomendados en casos de alergias estacionales, alimentarias, dérmicas o respiratorias, mejorando significativamente la calidad de vida del paciente.",
+    "slug": "antialergicos",
+    "icon": "AntiallergicsIcon"
+  }
+]
