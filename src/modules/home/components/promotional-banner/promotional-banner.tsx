@@ -13,7 +13,7 @@ export default function PromotionalBanner({ banner }: { banner: Banner }) {
   return (
     <Container>
       <section
-        className="relative container mx-auto py-6"
+        className="relative container mx-auto mb-6 md:mb-16 mt-2"
         aria-label={`Promoción: ${banner?.title}`}
       >
         <BannerCard banner={banner} priority />

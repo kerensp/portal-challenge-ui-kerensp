@@ -1,6 +1,7 @@
 import { CreditCardIcon } from '@/components/core/icons/services/credit-card-icon';
 import { MapPinHouseIcon } from '@/components/core/icons/services/map-pin-house-icon';
 import { TruckIcon } from '@/components/core/icons/services/truck-icon';
+import { cn } from '@/lib/utils';
 import Image from "next/image";
 import { ReactNode } from 'react';
 
@@ -28,9 +29,9 @@ const services: Service[] = [
   },
 ];
 
-const ServicesSection = () => {
+const ServicesSection = ({ className }: { className?: string }) => {
   return (
-    <section className="relative bg-primary my-6 py-12 px-4 md:px-8 text-white">
+    <section className={cn("relative bg-primary my-6 py-12 px-4 md:px-8 text-white", className)}>
       <Image
         src="/images/pill-vector.webp"
         alt=""

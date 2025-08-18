@@ -50,7 +50,7 @@ const HomeContainer = async () => {
 
       <BestSellersProducts products={products?.slice(5, 15)} />
 
-      <ServicesSection />
+      <ServicesSection className='mb-10 mt-16' />
 
       <RecentProducts products={products} banner={recentBanner[0]} />
 

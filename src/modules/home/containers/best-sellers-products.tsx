@@ -11,7 +11,7 @@ const BestSellersProducts = ({
   products,
 }: Props) => {
   return (
-    <Container title='Lo más vendido' className='px-0'>
+    <Container title='Lo más vendido' className='px-2 md:px-4'>
       <ProductCarousel products={products} />
     </Container>
   );

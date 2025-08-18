@@ -8,7 +8,7 @@ type BannerGridProps = {
 
 const BannerGrid = ({ banners }: BannerGridProps) => {
   return (
-    <Container>
+    <Container className='my-5'>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
         {banners?.map((banner, index) => (
           <BannerCard

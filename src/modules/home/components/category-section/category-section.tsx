@@ -16,7 +16,7 @@ type Props = {
 
 export default function CategorySection({ categories }: Props) {
   return (
-    <Container title='Obtén todo, justo aquí'>
+    <Container title='Obtén todo, justo aquí' className='my-2'>
       <Carousel
         className='w-full'
         opts={{
